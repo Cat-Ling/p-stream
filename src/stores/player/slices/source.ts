@@ -12,6 +12,7 @@ import { ValuesOf } from "@/utils/typeguard";
 
 export const playerStatus = {
   IDLE: "idle",
+  RESUME: "resume",
   SCRAPING: "scraping",
   PLAYING: "playing",
   SCRAPE_NOT_FOUND: "scrapeNotFound",

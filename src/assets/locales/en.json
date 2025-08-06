@@ -740,6 +740,13 @@
       "next": "Next episode",
       "nextSeason": "Next season"
     },
+    "resume": {
+      "badge": "Resume",
+      "title": "Continue watching?",
+      "description": "This episode is {{percentage}}% watched",
+      "resume": "Resume",
+      "restart": "Restart"
+    },
     "playbackError": {
       "badge": "Playback error",
       "errors": {
