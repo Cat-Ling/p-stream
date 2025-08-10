@@ -18,7 +18,6 @@ import { ScrapingItems, ScrapingSegment } from "@/hooks/useProviderScrape";
 import { useQueryParam } from "@/hooks/useQueryParams";
 import { MetaPart } from "@/pages/parts/player/MetaPart";
 import { PlaybackErrorPart } from "@/pages/parts/player/PlaybackErrorPart";
-import { PlayerPart } from "@/pages/parts/player/PlayerPart";
 import { ResumePart } from "@/pages/parts/player/ResumePart";
 import { ScrapeErrorPart } from "@/pages/parts/player/ScrapeErrorPart";
 import { ScrapingPart } from "@/pages/parts/player/ScrapingPart";
@@ -27,6 +26,8 @@ import { PlayerMeta, playerStatus } from "@/stores/player/slices/source";
 import { useProgressStore } from "@/stores/progress";
 import { needsOnboarding } from "@/utils/onboarding";
 import { parseTimestamp } from "@/utils/timestamp";
+
+import { FancyPlayerPart } from "./parts/player/FancyPlayerPart";
 
 export function RealPlayerView() {
   const navigate = useNavigate();
@@ -163,7 +164,7 @@ export function RealPlayerView() {
   );
 
   return (
-    <PlayerPart backUrl={backUrl} onMetaChange={metaChange}>
+    <FancyPlayerPart backUrl={backUrl} onMetaChange={metaChange}>
       {status === playerStatus.IDLE ? (
         <MetaPart onGetMeta={handleMetaReceived} />
       ) : null}
@@ -191,7 +192,7 @@ export function RealPlayerView() {
         <ScrapeErrorPart data={errorData} />
       ) : null}
       {status === playerStatus.PLAYBACK_ERROR ? <PlaybackErrorPart /> : null}
-    </PlayerPart>
+    </FancyPlayerPart>
   );
 }
 
