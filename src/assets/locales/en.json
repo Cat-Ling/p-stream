@@ -741,7 +741,6 @@
       "nextSeason": "Next season"
     },
     "resume": {
-      "badge": "Resume",
       "title": "Continue watching?",
       "description": "This episode is {{percentage}}% watched",
       "resume": "Resume",
