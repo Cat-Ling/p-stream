@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/buttons/Button";
 import { Icon, Icons } from "@/components/Icon";
-import { IconPill } from "@/components/layout/IconPill";
 import { NextEpisodeButton } from "@/components/player/atoms/NextEpisodeButton";
 import { Paragraph } from "@/components/text/Paragraph";
 import { Title } from "@/components/text/Title";
@@ -48,7 +47,6 @@ export function ResumePart(props: ResumePartProps) {
   return (
     <ErrorLayout>
       <ErrorContainer>
-        {/* <IconPill icon={Icons.PLAY}>{t("player.resume.badge")}</IconPill> */}
         <Title>{t("player.resume.title")}</Title>
         <Paragraph>
           {t("player.resume.description", { percentage: roundedPercentage })}
@@ -71,7 +69,7 @@ export function ResumePart(props: ResumePartProps) {
             padding="md:px-12 p-2.5"
             className="w-full"
           >
-            {/* <Icon icon={Icons.ARROW_LEFT} className="mr-2" /> */}
+            <Icon icon={Icons.REPEAT} className="mr-2" />
             {t("player.resume.restart")}
           </Button>
 
